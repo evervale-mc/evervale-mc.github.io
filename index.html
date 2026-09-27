@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>常世の里 Evervale 参加案内</title>
+<meta name="description" content="バニラのマインクラフトに「暮らし」を加えたMODサーバー。建物を守り、大地が還る。暮らしと交易のサバイバル。テスト参加者募集中。">
+<link rel="icon" type="image/png" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://evervale-mc.github.io/">
+<meta property="og:title" content="常世の里 Evervale ― Minecraft MODサーバー">
+<meta property="og:description" content="バニラのマインクラフトに「暮らし」を加えたMODサーバー。建物を守り、大地が還る。暮らしと交易のサバイバル。テスト参加者募集中。">
+<meta property="og:image" content="https://evervale-mc.github.io/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#eef1ec; --surface:#ffffff; --ink:#1c2420; --muted:#56625a; --line:#d5dcd4;
+  --moss:#355f45; --moss-soft:#e1ebe2; --lantern:#a8781f; --lantern-soft:#f5ecd9;
+  --on-moss:#ffffff; --warn:#8a3b2c;
+  --display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#101612; --surface:#18201b; --ink:#e4eae4; --muted:#9aa89e; --line:#2b362f;
+    --moss:#7fb392; --moss-soft:#1f2d24; --lantern:#d9b45f; --lantern-soft:#2b2618;
+    --on-moss:#0e1511; --warn:#e39a88;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#101612; --surface:#18201b; --ink:#e4eae4; --muted:#9aa89e; --line:#2b362f;
+  --moss:#7fb392; --moss-soft:#1f2d24; --lantern:#d9b45f; --lantern-soft:#2b2618;
+  --on-moss:#0e1511; --warn:#e39a88;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.8;padding-inline:20px;padding-block:0 56px}
+.wrap{max-width:720px;margin:0 auto}
+header{padding-block:56px 36px;border-bottom:1px solid var(--line);display:grid;gap:18px}
+.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--lantern);font-weight:700}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,9vw,64px);line-height:1.1;margin:0;text-wrap:balance}
+h1 small{display:block;font-family:var(--body);font-weight:500;font-size:.3em;letter-spacing:.2em;color:var(--muted);margin-top:10px}
+.lead{margin:0;max-width:36em;color:var(--ink)}
+.join{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin-top:6px}
+.addr{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 8px 8px 14px}
+.addr span{font-size:12px;color:var(--muted)}
+.addr code{font-family:var(--mono);font-size:17px;user-select:all}
+button{font:inherit;cursor:pointer;border-radius:8px}
+button:focus-visible{outline:3px solid var(--lantern);outline-offset:2px}
+.copy{border:1px solid var(--line);background:var(--moss-soft);color:var(--ink);padding:4px 12px;font-size:14px}
+.dl{border:0;border-radius:8px;background:var(--moss);color:var(--on-moss);padding:12px 22px;font-weight:700;font-size:16px;display:grid;text-align:left;line-height:1.4;text-decoration:none}
+.dl:focus-visible{outline:3px solid var(--lantern);outline-offset:2px}
+.dl small{font-weight:400;font-size:12px;opacity:.85}
+.dc{border:1px solid var(--moss);border-radius:8px;background:var(--surface);color:var(--moss);padding:12px 22px;font-weight:700;font-size:16px;display:grid;text-align:left;line-height:1.4;text-decoration:none}
+.dc small{font-weight:400;font-size:12px;color:var(--muted)}
+.dc:focus-visible{outline:3px solid var(--lantern);outline-offset:2px}
+.dl[aria-disabled="true"]{opacity:.55;cursor:default}
+.status{font-size:14px;color:var(--muted);min-height:1.8em;margin:0}
+section{padding-block:36px;border-bottom:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:600;font-size:26px;margin:0 0 16px;line-height:1.35}
+h3{font-size:16px;margin:0 0 4px}
+p{margin:0 0 12px}
+.need{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.need li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:2px 14px;font-size:14px}
+ol.steps{list-style:none;padding:0;margin:0;display:grid;gap:20px;counter-reset:s}
+ol.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;counter-increment:s}
+ol.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:28px;color:var(--lantern);line-height:1.2;text-align:center;border-right:1px solid var(--line)}
+ol.steps p{margin:0}
+kbd,.file{font-family:var(--mono);font-size:.9em;background:var(--moss-soft);border-radius:4px;padding:1px 6px}
+.note{background:var(--lantern-soft);border-radius:8px;padding:12px 16px;font-size:15px;margin-top:20px}
+ul.rules{margin:0;padding-left:1.2em;display:grid;gap:6px}
+details{border-top:1px solid var(--line);padding-block:12px}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:500}
+details p{margin:8px 0 0;color:var(--muted)}
+footer{padding-top:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+@media (max-width:480px){ .addr code{font-size:15px} .dl,.dc{width:100%} .addr{width:100%;justify-content:space-between} }
+@media (prefers-reduced-motion:no-preference){ .dl,.copy{transition:transform .12s} .dl:active,.copy:active{transform:translateY(1px)} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">MINECRAFT JAVA 26.3 ・ MODサーバー</div>
+  <h1>常世の里<small>EVERVALE</small></h1>
+  <p class="lead">バニラのマインクラフトに「暮らし」を加えたサーバーです。建物は材料を納めて維持し、掘った大地は時間とともに元に戻ります。村の番頭と取引して銅貨を稼ぎ、自分のポストから市場に出品し、勇敢な冒険を証明する捧げもので冥界の門と果ての門を開きましょう。</p>
+  <div class="join">
+    <div class="addr"><span>アドレス</span><code id="addr">160.251.254.108</code><button class="copy" id="copy" type="button">コピー</button></div>
+    <a class="dl" id="dl" href="https://drive.google.com/file/d/1dF5h_AEfReYZGCN-Rn5We41YhW7fXJaM/view?usp=sharing" target="_blank" rel="noopener">参加セットをダウンロード<small id="dlsub">Windows用・約10MB・v0.8.5</small></a>
+    <a class="dc" href="https://discord.gg/QBFBaCNBjW" target="_blank" rel="noopener">Discordに参加<small>お知らせ・質問・雑談</small></a>
+  </div>
+  <p class="status" id="status" role="status"></p>
+</header>
+
+<section>
+  <h2>用意するもの</h2>
+  <ul class="need">
+    <li>Windows の PC</li>
+    <li>マインクラフト Java版（正規版）</li>
+    <li>公式ランチャー</li>
+  </ul>
+  <p style="margin-top:14px">Minecraft 26.3、Fabric、必要なMODは参加セットに入っています。自分でダウンロードするものはありません。</p>
+</section>
+
+<section>
+  <h2>参加のしかた</h2>
+  <ol class="steps">
+    <li><div><h3>ダウンロードして展開する</h3><p>ボタンを押すと Google ドライブで中身の一覧が開きます。中のファイルは押さずに、画面右上の下向き矢印（ダウンロード）で ZIP ごと保存したら、そのZIPを右クリックして「すべて展開」。マイクラのランチャーは閉じておきます。</p></div></li>
+    <li><div><h3>INSTALL.bat を実行する</h3><p>展開したフォルダの <span class="file">INSTALL.bat</span> をダブルクリック。「WindowsによってPCが保護されました」と出たら「詳細情報」→「実行」。</p></div></li>
+    <li><div><h3>「常世の里」で遊ぶ</h3><p>ランチャーの起動構成で「常世の里」を選んでプレイ。マルチプレイの一覧に最初から入っている「常世の里」に参加します。</p></div></li>
+  </ol>
+  <div class="note">今までのワールドやMODはそのまま残ります。常世の里は専用のフォルダ（<span class="file">%APPDATA%\.evervale</span>）を使います。</div>
+</section>
+
+<section>
+  <h2>Modrinth App・Prism Launcher を使う人</h2>
+  <p>ZIPの中の <span class="file">modrinth</span> フォルダにある <span class="file">.mrpack</span> を、ランチャーの「ファイルから読み込む」で開くだけで遊べます。Mac の人もこちらを使ってください。</p>
+</section>
+
+<section>
+  <h2>はじめにやること</h2>
+  <ol class="steps">
+    <li><div><h3>「遊び方」を開く</h3><p>持ち物画面の右上にある「遊び方」ボタンで、このサーバーのしくみを項目ごとに読めます。更新の内容は、設定タブの「更新履歴」にあります。</p></div></li>
+    <li><div><h3>番頭に売って銅貨を稼ぐ</h3><p>村の鐘の近くにいる番頭は、村が欲しがっている品を銅貨で買い取ってくれます（取引はゲーム内の1日＝60分ごとに入れ替わります）。どの村が何を欲しがっているかは、地図の村の印にのせると分かります。もらった銅貨は、持ち物タブの下の欄で口座に入れられます。</p></div></li>
+    <li><div><h3>家を守る</h3><p>家の床に土台を敷き、石のチェストを置くと、家が保護を受けます。チェストに建材の材料を入れておくと、少しずつ維持費として使われます。材料が切れたまま12時間たつと、その材料の部分から風化して消えていきます。建物の状態はハンマーで見られます。</p></div></li>
+    <li><div><h3>ポストで売り買いする</h3><p>ポスト（1人3個まで）に品物を入れて、市場タブから出品できます。遠くの品を買うと、ほかのプレイヤーが運送を引き受けて届けてくれます。自分が運び手になって稼ぐこともできます（依頼タブ）。</p></div></li>
+    <li><div><h3>死んでも慌てない</h3><p>ホットバーと装備はそのまま残り、ほかの持ち物は死んだ場所の墓石に入ります。60分以内にツルハシで壊せば取り戻せます。</p></div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>MODの更新</h2>
+  <p>更新は自動です。サーバーに入ったときに新しい版があれば入れ替わり、「更新しました」と出て一度切断されます。マインクラフトを再起動して、もう一度入ってください。</p>
+  <p>更新やメンテナンスのお知らせは <a href="https://discord.gg/QBFBaCNBjW" target="_blank" rel="noopener" style="color:var(--moss)">Discord</a> の「お知らせ」に出します。</p>
+</section>
+
+<section>
+  <h2>ルール</h2>
+  <ul class="rules">
+    <li>PvPはありません。ほかの人を攻撃する遊び方はできません。</li>
+    <li>他の人の建物や持ち物に、許可なく手を出さないでください。</li>
+    <li>荒らし、迷惑行為、暴言は禁止です。人を閉じ込める、建物の入口をふさぐ、集落にモブを連れ込むのも迷惑行為です。</li>
+    <li>動物は、半径16マスに24匹までしか繁殖できません。大きな牧場や装置はサーバーを重くするので控えてください。</li>
+    <li>チート、不正なMOD、不具合を利用した遊び方は禁止です。不具合を見つけたら教えてください。</li>
+    <li>配信や動画は自由です。ほかの人が大きく映るときは、ひとこと声をかけてください。</li>
+    <li>運営の判断で、キックや期間つきの出入り禁止、出入り禁止にすることがあります。</li>
+    <li>困ったこと・不具合の報告は <a href="https://discord.gg/QBFBaCNBjW" target="_blank" rel="noopener" style="color:var(--moss)">Discord</a> へどうぞ。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>よくある質問</h2>
+  <details><summary>「Can't connect to server」と出て入れません</summary><p>サーバーの再起動中か、メンテナンス中のことがあります。数分おいてから、マルチプレイ画面の「再読み込み」を押してください。状況は Discord の「お知らせ」で確認できます。</p></details>
+  <details><summary>「MODのバージョンが違います」と出ました</summary><p>自動更新の途中です。マインクラフトを一度終了して起動し直せば、新しい版で入れます。</p></details>
+  <details><summary>ゲームが重いです</summary><p>参加セットには描画を軽くするMOD（Sodium）とメモリを節約するMOD（FerriteCore）が入っています。「常世の里」の起動構成はメモリを4GB使う設定です。PCのメモリが8GB未満だと重くなることがあります。描画距離を下げると軽くなります。</p></details>
+  <details><summary>死んだら持ち物はどうなりますか？</summary><p>ホットバーと身に着けている装備はそのまま残ります。それ以外の持ち物は、死んだ場所の墓石に入ります。墓石は地図に印が付き、自分にだけ見える光の柱が立ちます。60分以内にツルハシで壊すと持ち物が出てきます。過ぎると墓石ごと崩れてなくなります。</p></details>
+  <details><summary>銅貨はどうやって稼ぎますか？</summary><p>村の鐘の近くにいる番頭に、村が欲しがっている品を売ると銅貨がもらえます（取引はゲーム内の1日＝60分ごとに入れ替わります）。村人との取引で手に入れたエメラルドを、銀行タブの両替所で銅貨に替えることもできます。自分のポストに品物を入れて市場に出品すれば、ほかの人に売れます。銅貨は持ち物タブで口座に入れたり出したりできます。</p></details>
+  <details><summary>レッドストーンが置けません</summary><p>サーバーの負荷を抑えるため、レッドストーンの粉・リピーター・コンパレーター・オブザーバー・ピストンは置けません。ボタンやレバーでドアやランプを動かすことはできます。</p></details>
+</section>
+
+<footer><span>常世の里 / Evervale v0.8.5</span><a href="https://discord.gg/QBFBaCNBjW" target="_blank" rel="noopener" style="color:inherit">Discord</a><a href="https://x.com/evervale_mc" target="_blank" rel="noopener" style="color:inherit">X（@evervale_mc）</a><span>Minecraft Java 26.3 ・ Fabric 0.19.5</span></footer>
+</div>
+
+<script>
+(function(){
+  var status=document.getElementById('status');
+  var copy=document.getElementById('copy'), addr=document.getElementById('addr');
+  copy.addEventListener('click',function(){
+    var text=addr.textContent.trim();
+    function selectIt(){var r=document.createRange();r.selectNodeContents(addr);var s=getSelection();s.removeAllRanges();s.addRange(r);status.textContent='アドレスを選択しました。Ctrl+C でコピーしてください。';}
+    try{navigator.clipboard.writeText(text).then(function(){status.textContent='アドレスをコピーしました。';},selectIt);}catch(e){selectIt();}
+  });
+  // The download link: the shared file of the join pack (Google Drive etc.). Empty = not ready yet.
+  var DOWNLOAD_URL='https://drive.google.com/file/d/1dF5h_AEfReYZGCN-Rn5We41YhW7fXJaM/view?usp=sharing';
+  var dl=document.getElementById('dl');
+  if(DOWNLOAD_URL){dl.href=DOWNLOAD_URL;dl.target='_blank';dl.rel='noopener';dl.removeAttribute('aria-disabled');document.getElementById('dlsub').textContent='Windows用・約10MB・v0.8.5';}
+  else{dl.addEventListener('click',function(e){e.preventDefault();status.textContent='ダウンロードは準備中です。もう少しお待ちください。';});}
+})();
+</script>
+</body>
+</html>
