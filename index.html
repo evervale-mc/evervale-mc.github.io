@@ -91,7 +91,7 @@ footer{padding-top:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap
   <p class="lead">バニラのマインクラフトに「暮らし」を加えたサーバーです。建物は材料を納めて維持し、掘った大地は時間とともに元に戻ります。村の番頭と取引して銅貨を稼ぎ、自分のポストから市場に出品し、勇敢な冒険を証明する捧げもので冥界の門と果ての門を開きましょう。</p>
   <div class="join">
     <div class="addr"><span>アドレス</span><code id="addr">160.251.254.108</code><button class="copy" id="copy" type="button">コピー</button></div>
-    <a class="dl" id="dl" href="https://drive.google.com/file/d/1dF5h_AEfReYZGCN-Rn5We41YhW7fXJaM/view?usp=sharing" target="_blank" rel="noopener">参加セットをダウンロード<small id="dlsub">Windows用・約10MB・v0.8.5</small></a>
+    <a class="dl" id="dl" href="https://drive.google.com/file/d/1dF5h_AEfReYZGCN-Rn5We41YhW7fXJaM/view?usp=sharing" target="_blank" rel="noopener">参加セットをダウンロード<small id="dlsub">Windows用・約25MB・v0.8.6</small></a>
     <a class="dc" href="https://discord.gg/QBFBaCNBjW" target="_blank" rel="noopener">Discordに参加<small>お知らせ・質問・雑談</small></a>
   </div>
   <p class="status" id="status" role="status"></p>
@@ -160,10 +160,11 @@ footer{padding-top:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap
   <details><summary>ゲームが重いです</summary><p>参加セットには描画を軽くするMOD（Sodium）とメモリを節約するMOD（FerriteCore）が入っています。「常世の里」の起動構成はメモリを4GB使う設定です。PCのメモリが8GB未満だと重くなることがあります。描画距離を下げると軽くなります。</p></details>
   <details><summary>死んだら持ち物はどうなりますか？</summary><p>ホットバーと身に着けている装備はそのまま残ります。それ以外の持ち物は、死んだ場所の墓石に入ります。墓石は地図に印が付き、自分にだけ見える光の柱が立ちます。60分以内にツルハシで壊すと持ち物が出てきます。過ぎると墓石ごと崩れてなくなります。</p></details>
   <details><summary>銅貨はどうやって稼ぎますか？</summary><p>村の鐘の近くにいる番頭に、村が欲しがっている品を売ると銅貨がもらえます（取引はゲーム内の1日＝60分ごとに入れ替わります）。村人との取引で手に入れたエメラルドを、銀行タブの両替所で銅貨に替えることもできます。自分のポストに品物を入れて市場に出品すれば、ほかの人に売れます。銅貨は持ち物タブで口座に入れたり出したりできます。</p></details>
+  <details><summary>コントローラーで遊べますか？</summary><p>はい。Xbox などのゲームパッドに対応しています（参加セットに Controlify というMODが入っています）。マイクラを起動する前にコントローラーをつなげば使えます。初回に部品のダウンロードを聞かれたら「はい」を選んでください。コントローラー操作中は、ミニマップが左下に移ります。</p></details>
   <details><summary>レッドストーンが置けません</summary><p>サーバーの負荷を抑えるため、レッドストーンの粉・リピーター・コンパレーター・オブザーバー・ピストンは置けません。ボタンやレバーでドアやランプを動かすことはできます。</p></details>
 </section>
 
-<footer><span>常世の里 / Evervale v0.8.5</span><a href="https://discord.gg/QBFBaCNBjW" target="_blank" rel="noopener" style="color:inherit">Discord</a><a href="https://x.com/evervale_mc" target="_blank" rel="noopener" style="color:inherit">X（@evervale_mc）</a><span>Minecraft Java 26.3 ・ Fabric 0.19.5</span></footer>
+<footer><span>常世の里 / Evervale v0.8.6</span><a href="https://discord.gg/QBFBaCNBjW" target="_blank" rel="noopener" style="color:inherit">Discord</a><a href="https://x.com/evervale_mc" target="_blank" rel="noopener" style="color:inherit">X（@evervale_mc）</a><span>Minecraft Java 26.3 ・ Fabric 0.19.5</span></footer>
 </div>
 
 <script>
@@ -178,7 +179,7 @@ footer{padding-top:28px;font-size:13px;color:var(--muted);display:flex;flex-wrap
   // The download link: the shared file of the join pack (Google Drive etc.). Empty = not ready yet.
   var DOWNLOAD_URL='https://drive.google.com/file/d/1dF5h_AEfReYZGCN-Rn5We41YhW7fXJaM/view?usp=sharing';
   var dl=document.getElementById('dl');
-  if(DOWNLOAD_URL){dl.href=DOWNLOAD_URL;dl.target='_blank';dl.rel='noopener';dl.removeAttribute('aria-disabled');document.getElementById('dlsub').textContent='Windows用・約10MB・v0.8.5';}
+  if(DOWNLOAD_URL){dl.href=DOWNLOAD_URL;dl.target='_blank';dl.rel='noopener';dl.removeAttribute('aria-disabled');document.getElementById('dlsub').textContent='Windows用・約25MB・v0.8.6';}
   else{dl.addEventListener('click',function(e){e.preventDefault();status.textContent='ダウンロードは準備中です。もう少しお待ちください。';});}
 })();
 </script>
